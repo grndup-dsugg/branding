@@ -20,6 +20,16 @@
 @media(max-width:620px){.shell{padding:0 18px}.site-header .shell{height:73px}.brand-icon{height:46px;width:46px}.brand-name{font-size:.87rem}.brand-type{font-size:.52rem}.header-right{display:none}.hero .shell{padding-top:49px;padding-bottom:46px}.hero h1{font-size:clamp(2.38rem,10vw,3.2rem)}.hero-copy{font-size:.92rem}.hero-meta{gap:12px;font-size:.65rem}.content-grid{padding-top:17px;padding-bottom:38px}.sidebar{padding:16px}.form-panel-inner{padding:29px 19px 25px}.form-bottom{padding:13px 19px;flex-wrap:wrap}.fields-grid{grid-template-columns:1fr;gap:23px}.field.half{grid-column:1/-1}.word-grid{gap:7px}.word-grid input{padding:11px 7px!important;font-size:.84rem}.option-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.choice span{font-size:.78rem;min-height:46px}.step-heading{margin-bottom:24px;padding-bottom:23px}.step-heading h2{font-size:2rem}.step-navigation{margin-top:25px;padding-top:24px}.btn{padding:12px 14px;gap:8px;font-size:.72rem}.step-note{text-align:left}.footer-inner{flex-direction:column-reverse;align-items:flex-start;gap:16px}.footer-logo{width:min(320px,85vw)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 @media print{body{background:#fff}.site-header,.hero,.sidebar,.step-navigation,.form-bottom,.footer{display:none!important}.content-grid{display:block;padding:0}.form-panel,.form-panel-inner{border:0;box-shadow:none;padding:0}.form-step[hidden]{display:block!important;page-break-inside:avoid;margin-bottom:38px}.form-step{display:block!important}.fields-grid{grid-template-columns:1fr 1fr}}
+
+/* GroundUP brand discovery — delivery states */
+.delivery-feedback{margin:18px 28px 0;padding:13px 16px;border:1px solid #b45309;border-left:4px solid #b45309;border-radius:5px;background:#fffbeb;color:#713f12;font-weight:600;line-height:1.55}
+.delivery-feedback[hidden],.submission-success[hidden]{display:none!important}
+.submission-success{text-align:center;padding:76px 30px 92px;max-width:680px;margin:auto}
+.success-icon{width:62px;height:62px;display:grid;place-items:center;margin:0 auto 22px;border-radius:50%;background:var(--gold);color:#111;font-size:2rem;font-weight:800}
+.success-eyebrow{letter-spacing:.16em;font-size:.75rem;font-weight:800;color:var(--gold-dark);margin:0 0 14px}
+.submission-success h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin:0 0 16px}
+.submission-success p:last-child{font-size:1.05rem;line-height:1.65;color:#454545;margin:0}
+@media(max-width:650px){.delivery-feedback{margin:16px 15px 0}.submission-success{padding:52px 20px 70px}}
 </style>
 </head>
 <body>
@@ -28,15 +38,14 @@
 <main class="shell content-grid" id="main-content">
   <aside class="sidebar" aria-label="Questionnaire progress"><div class="sidebar-overline">Your discovery roadmap</div><h2>The right questions.<br>The right direction.</h2><p>Work through each section at your own pace. Your answers help us shape a brand that is clear, distinct, and true to you.</p><div class="progress-labels"><span id="progress-stage">Section 1 of 6</span></div><div class="progress-track" role="progressbar" aria-label="Discovery progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="17" id="progress-track"><div class="progress-fill" id="progress-fill"></div></div><ol class="roadmap"><li class="roadmap-item active" data-roadmap="0" aria-current="step"><span class="roadmap-number">01</span><span class="roadmap-name">The foundation</span><span class="roadmap-status" aria-hidden="true"></span></li><li class="roadmap-item" data-roadmap="1"><span class="roadmap-number">02</span><span class="roadmap-name">Your customers</span><span class="roadmap-status" aria-hidden="true"></span></li><li class="roadmap-item" data-roadmap="2"><span class="roadmap-number">03</span><span class="roadmap-name">Your difference</span><span class="roadmap-status" aria-hidden="true"></span></li><li class="roadmap-item" data-roadmap="3"><span class="roadmap-number">04</span><span class="roadmap-name">Your personality</span><span class="roadmap-status" aria-hidden="true"></span></li><li class="roadmap-item" data-roadmap="4"><span class="roadmap-number">05</span><span class="roadmap-name">Your visual direction</span><span class="roadmap-status" aria-hidden="true"></span></li><li class="roadmap-item" data-roadmap="5"><span class="roadmap-number">06</span><span class="roadmap-name">Goals &amp; next steps</span><span class="roadmap-status" aria-hidden="true"></span></li></ol><div class="sidebar-foot">Your answers are saved on this device while you work. Only completed submissions are sent to GroundUP.</div></aside>
   <div class="form-panel">
-    <form id="discovery-form" action="https://formsubmit.co/dsugg@grndupmedia.com" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="New GroundUP Brand Discovery Submission">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://grndup-dsugg.github.io/branding/thank-you.html">
-      <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <!-- GroundUP Brand Discovery email submission via Formspree -->
+    <form id="discovery-form" action="https://formspree.io/f/xbggbwjo" method="POST" novalidate>
+      <input type="hidden" name="subject" value="New GroundUP Brand Discovery Submission">
+      <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="hidden" name="Submission date" id="submission-date">
       <div class="form-panel-inner"><section class="form-step" id="step-1" data-step="0" aria-labelledby="step-title-1">
       <div class="step-heading"><span class="step-kicker">SECTION 01 <span class="kicker-rule"></span> THE FOUNDATION</span><h2 id="step-title-1">Start with the basics.</h2><p>We want to understand the business behind the brand, not just the name on the sign.</p></div>
-      <div class="fields-grid"><div class="field half"><label class="field-label" for="field-business-name">Business / organization name<span class="required-indicator" aria-label="required">*</span></label><input id="field-business-name" type="text" name="Business name" placeholder="e.g. North Street Fitness" required aria-required="true"></div><div class="field half"><label class="field-label" for="field-primary-contact">Your name<span class="required-indicator" aria-label="required">*</span></label><input id="field-primary-contact" type="text" name="Primary contact" placeholder="First and last name" required aria-required="true"></div><div class="field half"><label class="field-label" for="field-email-address">Your email address<span class="required-indicator" aria-label="required">*</span></label><input id="field-email-address" type="email" name="Email address" placeholder="you@business.com" required aria-required="true"></div><div class="field half"><label class="field-label" for="field-current-website">Current website (if you have one)</label><input id="field-current-website" type="text" name="Current website" placeholder="https://example.com"></div><div class="field full"><label class="field-label" for="field-what-the-business-does">In plain language, what does your business do?<span class="required-indicator" aria-label="required">*</span></label><p class="field-hint">What do you offer, and who do you help? Avoid industry jargon.</p><textarea id="field-what-the-business-does" name="What the business does" rows="3" placeholder="Share your thoughts here…" required aria-required="true"></textarea></div><div class="field full"><label class="field-label" for="field-why-now">What prompted you to work on your brand now?</label><p class="field-hint">A new business, a change in direction, growth, outdated visuals, a new audience…</p><textarea id="field-why-now" name="Why now" rows="3" placeholder="Share your thoughts here…"></textarea></div></div>
+      <div class="fields-grid"><div class="field half"><label class="field-label" for="field-business-name">Business / organization name<span class="required-indicator" aria-label="required">*</span></label><input id="field-business-name" type="text" name="Business name" placeholder="e.g. North Street Fitness" required aria-required="true"></div><div class="field half"><label class="field-label" for="field-primary-contact">Your name<span class="required-indicator" aria-label="required">*</span></label><input id="field-primary-contact" type="text" name="Primary contact" placeholder="First and last name" required aria-required="true"></div><div class="field half"><label class="field-label" for="field-email-address">Your email address<span class="required-indicator" aria-label="required">*</span></label><input id="field-email-address" type="email" name="email" placeholder="you@business.com" required aria-required="true"></div><div class="field half"><label class="field-label" for="field-current-website">Current website (if you have one)</label><input id="field-current-website" type="text" name="Current website" placeholder="https://example.com"></div><div class="field full"><label class="field-label" for="field-what-the-business-does">In plain language, what does your business do?<span class="required-indicator" aria-label="required">*</span></label><p class="field-hint">What do you offer, and who do you help? Avoid industry jargon.</p><textarea id="field-what-the-business-does" name="What the business does" rows="3" placeholder="Share your thoughts here…" required aria-required="true"></textarea></div><div class="field full"><label class="field-label" for="field-why-now">What prompted you to work on your brand now?</label><p class="field-hint">A new business, a change in direction, growth, outdated visuals, a new audience…</p><textarea id="field-why-now" name="Why now" rows="3" placeholder="Share your thoughts here…"></textarea></div></div>
       <div class="step-navigation"><span class="nav-spacer"></span><button type="button" class="btn btn-primary next-btn">Continue <span aria-hidden="true">→</span></button></div>
       <p class="step-note">Asterisk (*) indicates a required answer.</p>
     </section><section class="form-step" id="step-2" data-step="1" aria-labelledby="step-title-2" hidden>
@@ -66,6 +75,13 @@
       <p class="step-note">Not sure about something? It’s okay to leave optional questions blank.</p>
     </section></div>
     </form>
+    <div id="delivery-feedback" role="alert" aria-live="assertive" class="delivery-feedback" hidden></div>
+    <div id="submission-success" class="submission-success" role="status" hidden>
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <p class="success-eyebrow">BRAND DISCOVERY COMPLETE</p>
+      <h2>Thank you for sharing your story.</h2>
+      <p>Your discovery questionnaire has been received. GroundUP will review your answers and follow up about the next steps.</p>
+    </div>
     <div class="form-bottom"><div class="autosave"><i class="autosave-dot"></i><span id="autosave-status" role="status">Answers saved in this browser as you type</span></div><button type="button" class="clear-btn" id="clear-draft">Clear saved answers</button></div>
   </div>
 </main>
@@ -137,9 +153,10 @@
       const data=JSON.parse(raw);if(!data||!data.values)return;
       editable.forEach(el=>{
         const key=el.type==='checkbox'?el.dataset.group+':'+el.value:el.name;
-        if(Object.prototype.hasOwnProperty.call(data.values,key)){
-          if(el.type==='checkbox')el.checked=Boolean(data.values[key]);
-          else el.value=String(data.values[key]);
+        const previousKey=(key==='email' && !Object.prototype.hasOwnProperty.call(data.values,key))?'Email address':key;
+        if(Object.prototype.hasOwnProperty.call(data.values,previousKey)){
+          if(el.type==='checkbox')el.checked=Boolean(data.values[previousKey]);
+          else el.value=String(data.values[previousKey]);
         }
       });
       if(Number.isInteger(data.step))active=Math.max(0,Math.min(steps.length-1,data.step));
@@ -167,18 +184,61 @@
     saveStatus.textContent='Saved answers cleared';
     window.scrollTo({top:0,behavior:'smooth'});
   });
-  form.addEventListener('submit',event=>{
+  const feedback=document.getElementById('delivery-feedback');
+  const submit=form.querySelector('.submit-btn');
+  const originalButtonHTML=submit.innerHTML;
+  function showDeliveryError(message){
+    feedback.textContent=message;
+    feedback.hidden=false;
+    feedback.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  form.addEventListener('submit',async event=>{
+    event.preventDefault();
+    feedback.hidden=true;
+    // Preserve the existing multi-step validation and checkbox summaries.
     for(let i=0;i<steps.length;i++){
-      if(!validate(i)){event.preventDefault();return;}
+      if(!validate(i))return;
     }
     summarizeChoices();
     // Use the visitor's local calendar date, not the UTC date.
     const d=new Date();
     document.getElementById('submission-date').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-    const submit=form.querySelector('.submit-btn');
-    submit.disabled=true;submit.textContent='Sending your discovery…';
-    saveStatus.textContent='Sending to GroundUP via secure form submission…';
-    // The browser posts the form to FormSubmit. We do not claim success before its response.
+    if(submit.disabled)return;
+    submit.disabled=true;
+    submit.textContent='Sending your discovery…';
+    saveStatus.textContent='Sending your discovery to GroundUP…';
+    try{
+      const response=await fetch(form.action,{
+        method:'POST',
+        body:new FormData(form),
+        headers:{'Accept':'application/json'}
+      });
+      let result={};
+      try{result=await response.json();}catch(_ignored){}
+      if(!response.ok){
+        const description=Array.isArray(result.errors)?result.errors.map(e=>e.message).filter(Boolean).join(' '):'';
+        if(response.status===429)throw new Error('Too many submissions have been sent recently. Please try again shortly.');
+        throw new Error(description || 'Submission could not be delivered. Please try again or contact GroundUP.');
+      }
+      // The provider accepted the submission; clear browser draft only now.
+      clearTimeout(saveTimeout);
+      try{localStorage.removeItem(storageKey);}catch(_ignored){}
+      form.hidden=true;
+      document.getElementById('submission-success').hidden=false;
+      const bottom=document.querySelector('.form-bottom');
+      if(bottom)bottom.hidden=true;
+      saveStatus.textContent='Submitted to GroundUP';
+      document.getElementById('submission-success').scrollIntoView({behavior:'smooth',block:'start'});
+    }catch(error){
+      const message=error instanceof TypeError
+        ? 'Unable to connect to the submission service. Your answers are still saved in this browser. Please check your connection and try again.'
+        : (error.message || 'Something went wrong. Please try again.');
+      showDeliveryError(message);
+      saveStatus.textContent='Submission not sent — your answers are saved on this device';
+    }finally{
+      submit.disabled=false;
+      submit.innerHTML=originalButtonHTML;
+    }
   });
   restoreDraft();showStep(active,false);summarizeChoices();
 })();
